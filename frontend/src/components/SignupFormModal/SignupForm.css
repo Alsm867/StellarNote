@@ -1,0 +1,28 @@
+.signup-button{
+        font-size: 15px;
+        background-color: rgb(0, 9, 58);
+        color: rgb(0, 162, 255);
+        border-top: solid 1px rgb(0, 119, 255);
+        border-radius: 5px;
+        padding: 5px;
+        margin: 10px;
+}
+
+.sign-up-form{
+        background-color: rgb(19, 22, 211);
+        border: solid 1px rgb(0, 162, 255);
+        border-radius: 25px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+.sign-cred{
+        color:rgb(0, 162, 255);
+}
+
+.the-errors{
+        font-weight: bold;
+}
