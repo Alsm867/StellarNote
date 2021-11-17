@@ -1,26 +1,27 @@
-.about-button{
-    margin-left: 20px;
-    background-color: transparent;
-    border: none;
-    color: rgb(255, 255, 255);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
+.about-button {
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
 }
 
-.about{
-    background-color: rgba(61, 62, 68, 0.685);
-    color: rgb(255, 255, 255);
-    border: solid 1px rgb(255, 255, 255);
-    border-radius: 25px;
-    font-family: 'Press Start 2P', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 340px;
-    height: 220px;
+.about {
+  color: rgb(255, 255, 255);
+  border: solid 10px rgb(0, 255, 242);
+  border-style: none double none;
+  background: linear-gradient(to right, #001885e1 0%, #520081e1 100%);
+  border-radius: 25px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 220px;
 }
