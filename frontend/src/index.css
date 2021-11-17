@@ -1,1 +1,36 @@
 /* TODO Add site wide styles */
+body{
+    background-image: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637100287/Styckr/hubble-25th-anniversary-image_fungp3.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.all-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page1{
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 70px;
+    border: solid 10px rgb(185, 185, 185);
+    border-style: double double none;
+    margin-top: 250px;
+    text-align: center;
+    width: 560px;
+    height: 240px;
+}
+
+.stellar-note{
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+.about-home{
+    color: white;
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+}

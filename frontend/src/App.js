@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 // import SignupFormPage from './components/SignupFormPage';
-import LoginFormPage from "./components/LoginFormPage";
+// import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
-import { Modal } from './context/Modal';
+import FooterComponent from './components/FooterComponent';
+import './index.css'
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,22 +18,26 @@ function App() {
   return (
     <>
       <Navigation isLoaded={isLoaded} />
-      <button onClick={() => setShowModal(true)}>Modal</button>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <h1>Hello I am a Modal</h1>
-        </Modal>
-      )}
       {isLoaded && (
         <Switch>
+          <Route exact path='/'>
+            <div className='all-home'>
+
+            <div className='home-page1'>
+            <h1 className='stellar-note'>Stellar Note</h1>
+            <p className='about-home'>A place where you can share your adventures you've had in the different forests around the world!</p>
+            </div>
+            </div>
+          </Route>
           <Route path="/login" >
-            <LoginFormPage />
+            {/* <LoginFormPage /> */}
           </Route>
           <Route path='/signup'>
             {/* <SignupFormPage /> */}
           </Route>
         </Switch>
       )}
+      <FooterComponent />
     </>
   );
 }
