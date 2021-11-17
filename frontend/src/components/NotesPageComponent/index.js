@@ -7,8 +7,8 @@ function TheNotes(){
 
 
     return(
-        <div>
-
+        <div className="main-notes">
+            <div className='notebook-bar'></div>
         </div>
     )
 }
