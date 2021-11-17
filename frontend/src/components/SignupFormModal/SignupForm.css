@@ -3,8 +3,8 @@
         color: rgb(255, 255, 255);
         font-family: 'Black Ops One', cursive;
         border: solid 1px rgb(0, 255, 242);
-        border-style: double double none;
-        background: linear-gradient(to right, #a200ff 0%, #002fff 100%);
+        border-style: double none double;
+        background: linear-gradient(to right, #520081 0%, #001885 100%);
         border-radius: 5px;
         padding: 5px;
         margin: 10px;
@@ -13,7 +13,7 @@
 .sign-up-form{
         color: rgb(0, 0, 0);
         border: solid 10px rgb(0, 255, 242);
-        border-style: double double none;
+        border-style: double none double;
         border-radius: 25px;
         width: 300px;
         display: flex;

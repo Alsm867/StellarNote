@@ -1,36 +1,55 @@
 /* TODO Add site wide styles */
 body{
-    background-image: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637100287/Styckr/hubble-25th-anniversary-image_fungp3.jpg');
+    background-image: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637169177/Styckr/StarfieldSimulation_yrrrcf.gif');
     background-repeat:no-repeat;
     background-size: cover;
 }
 
 .all-home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .home-page1{
-    background-color: rgba(0, 0, 0, 0.705);
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
     border-radius: 70px;
-    border: solid 10px rgb(185, 185, 185);
-    border-style: double double none;
-    margin-top: 250px;
+    border: solid 10px rgb(0, 255, 242);
+    border-style: none double none;
+    margin-top: 150px;
     text-align: center;
     width: 560px;
-    height: 240px;
+    height: 75px;
 }
 
-.stellar-note{
+.stellar{
+    font-size: 34px;
     margin-top: 20px;
     font-family: 'Press Start 2P', cursive;
-    color: white;
+    color: rgb(0, 58, 248);
+}
+.note{
+    margin-top: 20px;
+    color: rgb(170, 0, 248);
 }
 
 .about-home{
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+    border-radius: 70px;
+    border: solid 10px rgb(0, 255, 242);
+    border-style: none double none;
     color: white;
-    margin-top: 20px;
+    text-align: center;
+    width: 750px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 170px;
     font-size: 24px;
     font-family: 'Press Start 2P', cursive;
+}
+
+.not-logged-in{
+    margin-top: 300px;
+    margin-left: 550px;
 }

@@ -2,26 +2,18 @@
   font-size: 15px;
   color: rgb(255, 255, 255);
   border: solid 1px rgb(0, 255, 242);
-  border-style: double double none;
+  border-style: double none double;
   font-family: "Black Ops One", cursive;
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
-  background: #a49405;
-  background: -moz-linear-gradient(left, #a45f05 0%, #cbb539 50%, #a45f05 100%);
-  background: -webkit-linear-gradient(
-    left,
-    #a45f05 0%,
-    #cbb539 50%,
-    #a45f05 100%
-  );
-  background: linear-gradient(to right, #002fff 0%, #a200ff 100%);
+  background: linear-gradient(to right, #001885 0%, #520081 100%);
 }
 
 .form-in-login {
   color: rgb(0, 0, 0);
   border: solid 10px rgb(0, 255, 242);
-  border-style: double double none;
+  border-style: double none double;
   border-radius: 25px;
   width: 300px;
   display: flex;

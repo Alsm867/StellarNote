@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-// import SignupFormPage from './components/SignupFormPage';
-// import LoginFormPage from "./components/LoginFormPage";
+import SignupFormModal from './components/SignupFormModal';
+import LoginForm from "./components/LoginFormModal";
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import FooterComponent from './components/FooterComponent';
-import './index.css'
+import TheNotes from './components/NotesPageComponent';
+import './index.css';
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+  const sessionUser = useSelector(state => state.session.user);
+  const [credential, setCredential] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
   const [showModal, setShowModal] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrors([]);
+    return dispatch(sessionActions.login({ credential, password })).catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
+  };
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -24,10 +42,44 @@ function App() {
             <div className='all-home'>
 
             <div className='home-page1'>
-            <h1 className='stellar-note'>Stellar Note</h1>
-            <p className='about-home'>A place where you can share your adventures you've had in the different forests around the world!</p>
+            <div className='stellar'>Stellar <span className='note'> Note</span></div>
+            </div>
+            <div className='about-home'>
+            <p >Got any bright ideas? Have some thoughts to jot down?
+              Or maybe you just want to take some Stellar Notes? Simply create an account, and you can start today!</p>
             </div>
             </div>
+          </Route>
+          <Route exact path='/notes'>
+            {sessionUser ? <TheNotes/> :
+            <div className='not-logged-in'>
+            <form className='form-in-login' onSubmit={handleSubmit}>
+        <ul>
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
+
+          <label className='login-cred'>
+            Username or Email <br/>
+            <input
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+            />
+          </label>
+          <label className='login-cred'>
+            Password <br/>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <button className='login-button' type="submit">Log In</button>
+      </form></div>}
           </Route>
           <Route path="/login" >
             {/* <LoginFormPage /> */}
