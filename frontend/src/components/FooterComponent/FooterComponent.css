@@ -1,0 +1,40 @@
+.Footer {
+  color: rgb(240, 240, 240);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.781);
+  /* border-radius: 10px; */
+  height: 50px;
+  position:fixed;
+  margin-top: 142px;
+  margin-right: 10px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.©{
+  margin-right: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.sam{
+  margin-right: 10px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.git{
+    height: 30px;
+    width: 30px;
+}
+
+.g-hub{
+  margin-right: 15px;
+}
+
+.my-hub{
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+}

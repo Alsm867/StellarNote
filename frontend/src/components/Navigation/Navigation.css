@@ -1,3 +1,32 @@
 .profile-dropdown {
   position: absolute;
 }
+
+#nav-tag{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(36, 41, 41, 0.726);
+  /* border-radius: 5px; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+}
+
+.logo{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.demo{
+  color: rgb(255, 255, 255);
+  border: solid 1px rgb(0, 255, 242);
+  font-size: 15px;
+  border-style: none double double;
+  background-color: #a200ff;
+  border-radius: 5px;
+  font-family: "Black Ops One", cursive;
+}

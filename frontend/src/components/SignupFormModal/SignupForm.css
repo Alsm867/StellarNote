@@ -1,26 +1,31 @@
 .signup-button{
         font-size: 15px;
-        background-color: rgb(0, 9, 58);
-        color: rgb(0, 162, 255);
-        border-top: solid 1px rgb(0, 119, 255);
+        color: rgb(255, 255, 255);
+        font-family: 'Black Ops One', cursive;
+        border: solid 1px rgb(0, 255, 242);
+        border-style: double double none;
+        background: linear-gradient(to right, #a200ff 0%, #002fff 100%);
         border-radius: 5px;
         padding: 5px;
         margin: 10px;
 }
 
 .sign-up-form{
-        background-color: rgb(19, 22, 211);
-        border: solid 1px rgb(0, 162, 255);
+        color: rgb(0, 0, 0);
+        border: solid 10px rgb(0, 255, 242);
+        border-style: double double none;
         border-radius: 25px;
         width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background: linear-gradient(to right, #45006dad 0%, #00146bad 100%);
 }
 
 .sign-cred{
-        color:rgb(0, 162, 255);
+        font-family: "Black Ops One", cursive;
+        color:rgb(255, 255, 255);
 }
 
 .the-errors{

@@ -1,0 +1,26 @@
+.about-button{
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+
+.about{
+    background-color: rgba(61, 62, 68, 0.685);
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 25px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 220px;
+}
