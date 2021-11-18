@@ -7,7 +7,8 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  background-color: rgba(36, 41, 41, 0.726);
+  border-bottom: 1px solid rgb(0, 255, 242);
+  background-color: rgba(56, 56, 56, 0.726);
   /* border-radius: 5px; */
   position: fixed;
   top: 0px;
