@@ -1,0 +1,52 @@
+.notebook-bar{
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+    border-radius: 70px;
+    border: solid 10px rgb(0, 255, 242);
+    border-style: none double none;
+    margin-top: 150px;
+    text-align: center;
+    width: 860px;
+    height: 75px;
+}
+
+.main-notes{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notebooks{
+    font-size: 20px;
+    margin-right: 0px;
+    margin-top:30px;
+    margin-left: 40px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(253, 253, 255);
+    display: flex;
+    flex-direction: row;
+    float: left;
+
+}
+
+.all-notes{
+    margin-top: 50px;
+    margin-bottom: 45px;
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+    border-radius: 70px;
+    border: solid 10px rgb(0, 255, 242);
+    border-style: none double none;
+    height: 800px;
+}
+
+.single-notes{
+    font-size: 17px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Black Ops One", cursive;
+        color:rgb(255, 255, 255);
+}
+ul{
+    list-style-type: none;
+}
