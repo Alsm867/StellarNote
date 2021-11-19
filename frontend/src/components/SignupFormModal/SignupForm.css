@@ -11,7 +11,8 @@
 }
 
 .sign-up-form{
-        color: rgb(0, 0, 0);
+        font-family: "Black Ops One", cursive;
+        color: rgb(255, 0, 0);
         border: solid 10px rgb(0, 255, 242);
         border-style: double none double;
         border-radius: 25px;
