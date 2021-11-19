@@ -35,13 +35,12 @@ function TheNotes() {
 
   useEffect(() => dispatch(getTheNotes(sessionUser.id)), []);
   useEffect(() => dispatch(getANotebook(sessionUser.id)), []);
-  useEffect(() => {}, [
-    currentNote,
+  useEffect(() => {},
+  [ currentNote,
     currentContent,
     currentTitle,
     currentNotebook,
-    open,
-  ]);
+    open, ]);
 
 
   const handleSubmit = async (e) => {
