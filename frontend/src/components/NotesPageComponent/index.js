@@ -21,7 +21,7 @@ function TheNotes() {
   const [currentNote, setCurrentNote] = useState("");
   const [currentTitle, setCurrentTitle] = useState("");
   const [currentContent, setMainNoteContent] = useState("");
-  const [currentNotebook, setCurrentNotebook] = useState("All Notes");
+  const [currentNotebook, setCurrentNotebook] = useState("Your Notes");
   const [name, setName] = useState("");
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
@@ -92,7 +92,7 @@ function TheNotes() {
   const handleBookDelete = async (e) => {
     setOpen(!open);
     await dispatch(deleteANotebook(currentNotebook.id));
-    setCurrentNotebook("All Notes");
+    setCurrentNotebook("Your Notes");
   };
 
   const postBook = async (e) => {
@@ -122,7 +122,7 @@ function TheNotes() {
       );
 
       const displayBook = (notebook) => {
-          if (notebook === "All Notes") {
+          if (notebook === "Your Notes") {
               return Object.values(notes).map((note) => setBook(note));
     } else {
       return Object.values(notes).map((note) => {
@@ -182,34 +182,38 @@ function TheNotes() {
           <h1>
             {currentNotebook.name || currentNotebook}
           </h1>
-          {currentNotebook != "All Notes" ? (
+          {currentNotebook != "Your Notes" ? (
             <h1 onClick={() => setOpen(!open)}>
-             <img src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637301508/Styckr/Untitled_design_5_ic3wy6.png' alt='edit'/>
+             <img src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637349113/Styckr/Untitled_design_6_i8hwhf.png' alt='edit'/>
             </h1>
           ) : (
             ""
           )}
         </div>
-        <button onClick={postNewNote}>
-          Create note
-        </button>
+
+        <button className='new-note' onClick={postNewNote}>
+           New Note
+            </button>
         <ul className='list-notes'>{displayBook(currentNotebook)}</ul>
       </div>
       <div className="taking-notes">
         {open && (
-          <div >
+          <div className='edit-notebook-title'>
             <form  onSubmit={changeBookName}>
               <input
-                placeholder="New notebook name.."
+               className='new-book-holder'
+                placeholder="Rename notebook"
                 required
                 onChange={(e) => setNewNotebookTitle(e.target.value)}
               ></input>
-              <button id="editNotebookButton" type="submit">
-                Edit name
+              <button className='save-note'type='submit'>
+              <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
-              <button id="deleteNotebookButton" onClick={handleBookDelete}>
-                Delete notebook
+              <button className='delete-note'onClick={handleBookDelete}>
+                <img className='delete-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285228/Styckr/Untitled_design_4_cnhbc4.png' alt='delete'/>
               </button>
+
+
             </form>
           </div>
         )}
@@ -225,6 +229,7 @@ function TheNotes() {
             }
           ></input>
             <div >
+
               <button className='delete-note' onClick={handleNoteDelete}>
                 <img className='delete-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285228/Styckr/Untitled_design_4_cnhbc4.png' alt='delete'/>
               </button>
