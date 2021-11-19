@@ -194,8 +194,9 @@ ul{
     color: rgb(0, 255, 242);
     border-color:rgba(0, 255, 242, 0);
     background-color:rgba(0, 255, 242, 0);
-    position: relative;
-    right: 28px;
+    position: absolute;
+    top: 167px;
+    right: 405px;
 }
 
 .new-book-title{
@@ -204,8 +205,11 @@ ul{
     height: 20px;
     padding-left: 10px;
     padding-right: 20px;
-    margin-left: 650px;
-    margin-top: 45px;
+    position: absolute;
+    top: 170px;
+    right: 400px;
+    /* margin-left: 650px;
+    margin-top: 95px; */
     color: white;
     font-family: "Black Ops One", cursive;
     border-radius: 40px;
