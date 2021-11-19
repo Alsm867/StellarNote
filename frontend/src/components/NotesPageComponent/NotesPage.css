@@ -3,9 +3,10 @@
     border-radius: 70px;
     border: solid 10px rgb(0, 255, 242);
     border-style: none double none;
-    margin-top: 150px;
+    margin-top: 70px;
+    margin-right: 240px;
     text-align: center;
-    width: 860px;
+    width: 1000px;
     height: 75px;
 }
 
@@ -19,14 +20,18 @@
 .notebooks{
     font-size: 20px;
     margin-right: 0px;
-    margin-top:30px;
+    margin-top:20px;
     margin-left: 40px;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Black Ops One", cursive;
     color: rgb(253, 253, 255);
     display: flex;
     flex-direction: row;
     float: left;
 
+}
+
+.each-book{
+    margin-right: 20px;
 }
 
 .all-notes{
@@ -49,4 +54,142 @@
 }
 ul{
     list-style-type: none;
+
+}
+
+.note-preview{
+    border: solid 10px rgb(0, 255, 242);
+    border-style: double none double;
+    border-radius: 40px;
+    text-align: center;
+    font-family: "Black Ops One", cursive;
+    color:rgb(255, 255, 255);
+    overflow-y: hidden;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    height: 700px;
+    width:285px;
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+}
+
+.note-preview:hover{
+    overflow-y: scroll;
+}
+
+.list-notes{
+   margin-right: 20px;
+}
+
+.list-title{
+    color: rgb(0, 255, 242);
+}
+
+.taking-notes{
+    /* background: linear-gradient(to right, #52008193 0%, #00188593 100%); */
+    height: 700px;
+    width: 500px;
+}
+
+.note-form{
+    margin-top: 70px;
+    margin-bottom: 100px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.notebook-title{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+.note-loca{
+    color: white;
+    font-size: 24px;
+    font-family: "Black Ops One", cursive;
+    height: 470px;
+    width: 1000px;
+    position: absolute;
+    left: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 10px rgb(0, 255, 242);
+    border-style: none double none;
+    border-radius: 40px;
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+}
+
+.save-icon{
+    width: 20px;
+    height:20px;
+}
+
+.delete-icon{
+    width: 20px;
+    height:20px;
+}
+
+.save-note{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgb(30, 255, 0);
+    border-radius: 40px;
+    /* position: relative;
+    top: 34px;
+    left: 400px; */
+    margin-top: 10px;
+    z-index: 3;
+}
+
+.delete-note{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px red;
+    border-radius: 40px;
+    /* right: 400px; */
+    /* position: absolute; */
+    margin-top: 10px;
+    z-index: 3;
+}
+
+.book-title{
+    color: white;
+    font-family: "Black Ops One", cursive;
+    font-size: 24px;
+    width: 400px;
+    position: absolute;
+    border: solid 5px rgb(0, 255, 242);
+    padding-left: 5px;
+    border-radius: 40px;
+    top: 190px;
+    left: 400px;
+    margin-bottom: 50px;
+    border-style: none double none;
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+}
+
+.add-book-bttn{
+    font-size: 20px;
+    color: rgb(0, 255, 242);
+    border-color:rgba(0, 255, 242, 0);
+    background-color:rgba(0, 255, 242, 0);
+    position: relative;
+    right: 28px;
+}
+
+.new-book-title{
+    font-size: 20px;
+    width: 200px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-left: 650px;
+    margin-top: 45px;
+    color: white;
+    font-family: "Black Ops One", cursive;
+    border-radius: 40px;
+    border: solid 1px rgb(0, 255, 242);
+    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
 }
