@@ -27,7 +27,7 @@
   border: solid 1px rgb(0, 255, 242);
   font-size: 15px;
   border-style: none double none;
-  background-color: #520081;
+  background: linear-gradient(to right, #00146bad 0%, #45006dad 100%);
   border-radius: 5px;
   font-family: "Black Ops One", cursive;
   margin: 10px;
@@ -52,7 +52,7 @@
   border: solid 1px rgb(0, 255, 242);
   border-style: double none double;
   font-family: "Black Ops One", cursive;
-  background: linear-gradient(to right, #002fff 0%, #a200ff 100%);
+  background: linear-gradient(to right, #001885 0%, #520081 100%);
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
