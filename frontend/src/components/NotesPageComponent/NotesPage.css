@@ -69,8 +69,8 @@ ul{
     position: absolute;
     right: 20px;
     top: 100px;
-    height: 700px;
-    width:285px;
+    height: 70%;
+    width:17%;
     background: #000b3aef;
 }
 
@@ -110,7 +110,7 @@ ul{
     color: white;
     font-size: 24px;
     font-family: "Black Ops One", cursive;
-    height: 470px;
+    height: 50%;
     /* width: 1000px; */
     width:70%;
     position: absolute;
