@@ -54,3 +54,15 @@ body{
     margin-top: 300px;
     margin-left: 550px;
 }
+
+button{
+    color: rgb(0, 255, 242);
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+    border-color: var(--ck-color-base-border);
+}
+
+:root{
+    --ck-color-base-border: #ff0000;
+}

@@ -8,6 +8,10 @@ import {
     editNotebook,
     deleteANotebook,
 } from "../../store/notebook";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import parse from 'html-react-parser';
+import ReactHtmlParser from 'react-html-parser';
 
 function TheNotes() {
   const dispatch = useDispatch();
@@ -26,7 +30,38 @@ function TheNotes() {
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
 
+  ClassicEditor.defaultConfig = {
+    toolbar: {
+      items: [
+        'heading',
+        '|',
+        'bold',
+        'italic',
+        '|',
+        'bulletedList',
+        'numberedList',
+        '|',
+        'undo',
+        'redo'
+      ]
+    },
+    image: {
+      toolbar: [
+        'imageStyle:full',
+        'imageStyle:side',
+        '|',
+        'imageTextAlternative'
+      ]
+    },
+    table: {
+      contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
+    },
+    language: 'en'
+  };
 
+  CKEditor.editorConfig = function (config) {
+    config.removePlugins = 'style';
+  }
 
 
 
@@ -116,7 +151,7 @@ function TheNotes() {
     }}
     >
       <span className='list-title'>{note?.title}</span>
-      <p id="dateOfNote">{note.content}</p>
+      <p >{ReactHtmlParser(note.content)}</p>
       </li>
       );
 
@@ -193,7 +228,7 @@ function TheNotes() {
         <button className='new-note' onClick={postNewNote}>
            New Note
             </button>
-        <ul className='list-notes'>{displayBook(currentNotebook)}</ul>
+        <ul className='list-notes'>{displayBook(ReactHtmlParser(currentNotebook))}</ul>
       </div>
       <div className="taking-notes">
         {open && (
@@ -236,16 +271,25 @@ function TheNotes() {
               <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
             </div>
-          <textarea
-           className='note-loca'
+          {/* <textarea
+            className='note-loca'
             placeholder="Your Stellar Notes Go Here!"
             onChange={
               newNote
-                ? (e) => setContent(e.target.value)
-                : (e) => setMainNoteContent(e.target.value)
-            }
+              ? (e) => setContent(e.target.value)
+              : (e) => setMainNoteContent(e.target.value)
+            }value={currentContent ? currentContent : content}
+            ></textarea> */}
+          <div>
+            <CKEditor
+            editor={ClassicEditor}
+            data={currentContent ? currentContent : content}
             value={currentContent ? currentContent : content}
-          ></textarea>
+            onChange={(e, editor)=> {
+              const data = editor.getData();
+              newNote ? setContent(data) : setMainNoteContent(data)
+            }}/>
+          </div>
           <div>
             <p >
               {currentNotebook.name ? currentNotebook.name : currentNotebook}
