@@ -141,7 +141,7 @@ function TheNotes() {
 
   const setBook = (note) => (
     <li
-      className="notebookNavListItem"
+      className="each-note"
       key={note.id}
       onClick={() => {
         setCurrentNote(note);
@@ -218,7 +218,7 @@ function TheNotes() {
           </h1>
           {currentNotebook != "Your Notes" ? (
             <h1 onClick={() => setOpen(!open)}>
-             <img src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637349113/Styckr/Untitled_design_6_i8hwhf.png' alt='edit'/>
+            <img src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637349113/Styckr/Untitled_design_6_i8hwhf.png' alt='edit'/>
             </h1>
           ) : (
             ""

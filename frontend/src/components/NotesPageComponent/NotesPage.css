@@ -34,6 +34,15 @@
 .each-book{
     margin-right: 20px;
 }
+.each-book:hover{
+    background-color: rgb(0, 255, 242);
+    color: black;
+}
+
+.each-note:hover{
+    background-color: rgb(0, 255, 242);
+    color: black;
+}
 
 .all-notes{
     margin-top: 50px;
@@ -132,9 +141,33 @@ ul{
     height:20px;
 }
 
+.save-icon:hover{
+    z-index: -1;
+    display: hidden;
+}
+.save-note:hover{
+    z-index: 10;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637688466/Styckr/Untitled_design_10_txignk.png') center;
+    text-align: center;
+    background-color: rgb(51, 255, 0);
+}
+
+
 .delete-icon{
     width: 20px;
     height:20px;
+}
+
+.delete-icon:hover{
+    z-index: -1;
+    display: hidden;
+}
+
+.delete-note:hover{
+    z-index: 10;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637690403/Styckr/Untitled_design_11_foisuv.png') center;
+    text-align: center;
+    background-color: red;
 }
 
 .new-note-icon{
