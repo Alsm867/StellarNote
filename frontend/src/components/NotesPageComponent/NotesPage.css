@@ -40,8 +40,10 @@
 }
 
 .each-note:hover{
-    background-color: rgb(0, 255, 242);
-    color: black;
+    padding: 2px;
+    border: solid 1px rgb(0, 255, 242);
+    width: auto;
+    background-color: #52008193;
 }
 
 .all-notes{
@@ -92,8 +94,10 @@ ul{
 }
 
 .list-title{
+    font-size: 18px;
     color: rgb(0, 255, 242);
 }
+
 
 .taking-notes{
     /* background: linear-gradient(to right, #52008193 0%, #00188593 100%); */
