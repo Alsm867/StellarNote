@@ -164,7 +164,7 @@ ul{
 
 .delete-icon:hover{
     z-index: -1;
-    display: hidden;
+    /* display: hidden; */
 }
 
 
@@ -196,18 +196,21 @@ ul{
 }
 
 .save-note:hover .the-second-span{
+    /* margin-bottom: -10px; */
     /* margin-top: 10px; */
     z-index: 102px;
     display:inline-block;
     position: relative;
     left: 40px;
-    bottom: 20px;
+    /* bottom: 20px; */
     color: rgb(0, 255, 0);
     text-shadow: 1px 1px 20px rgb(0, 255, 255);
 }
 
 .save-note:hover{
+    /* margin-bottom: -10px; */
     background-repeat: no-repeat;
+    border-radius: 40px;
     text-align: center;
     z-index: 100;
     background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637688466/Styckr/Untitled_design_10_txignk.png') center;
@@ -216,6 +219,7 @@ ul{
 }
 
 .save-note{
+    /* margin-bottom: 10px; */
     background-color: rgba(255, 255, 255, 0);
     border: solid 1px rgb(30, 255, 0);
     border-radius: 40px;
@@ -229,6 +233,8 @@ ul{
 }
 
 .delete-note{
+    padding: 0px;
+    /* margin-bottom: 10px; */
     background-color: rgba(255, 255, 255, 0);
     border: solid 1px red;
     border-radius: 40px;
@@ -241,6 +247,17 @@ ul{
     z-index: 3;
 }
 
+.delete-note:hover{
+    /* margin-bottom: -20px; */
+    text-align: center;
+    z-index: 100;
+    border-radius: 40px;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637690403/Styckr/Untitled_design_11_foisuv.png') center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: red;
+}
+
 .the-second-span{
     display: none;
 }
@@ -250,24 +267,17 @@ ul{
 }
 
 .delete-note:hover .the-third-span{
-    z-index: 102px;
+    margin-bottom: -10px;
+    z-index: 10px;
     display:inline-block;
     position: relative;
-    right: 46px;
-    bottom: 20px;
+    right: 55px;
+    /* bottom: 20px; */
     color: rgb(255, 0, 0);
-    text-shadow: 1px 1px 20px rgb(255, 0, 0);
+    text-shadow: 1px 1px 40px rgb(255, 0, 0);
 }
 
-.delete-note:hover{
-    margin-bottom: 0px;
-    background-repeat: no-repeat;
-    text-align: center;
-    z-index: 100;
-    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637690403/Styckr/Untitled_design_11_foisuv.png') center;
-    text-align: center;
-    background-color: red;
-}
+
 
 .the-span{
     display: none;
