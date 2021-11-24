@@ -39,7 +39,7 @@ function Navigation({ isLoaded }){
   return (
     <nav id='nav-tag'>
       <NavLink exact to="/">
-        <img className="logo" src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637096469/Styckr/Stellar_azeemj.png' alt="logo"/>
+        <img className="logo" src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637714769/Styckr/Stellar_1_xitwmb.png' alt="logo"/>
       </NavLink>
       <div className='isLoaded'>
         {isLoaded && sessionLinks}

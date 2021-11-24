@@ -8,7 +8,7 @@
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid rgb(0, 255, 242);
-  background-color: rgba(56, 56, 56, 0.726);
+  background-color: rgba(44, 44, 44, 0.726);
   /* border-radius: 5px; */
   position: fixed;
   top: 0px;
@@ -25,36 +25,48 @@
 
 .demo{
   color: rgb(255, 255, 255);
-  border: solid 1px rgb(0, 255, 242);
+  border: solid 1px rgb(226, 226, 226);
   font-size: 15px;
   border-style: none double none;
-  background: #520081;
+  background: #007685;
   border-radius: 5px;
   font-family: "Black Ops One", cursive;
   margin: 10px;
   padding: 5px;
 }
 
+.demo:hover{
+  background-color: #048100;
+}
+
 .log-out{
   color: rgb(255, 255, 255);
-  border: solid 1px rgb(0, 255, 242);
+  border: solid 1px rgb(226, 226, 226);
   font-size: 15px;
   border-style: none double none;
-  background-color: #520081;
+  background-color: #048100;
   border-radius: 5px;
   font-family: "Black Ops One", cursive;
   margin: 10px;
   padding: 5px;
+}
+
+.log-out:hover{
+  background: #007685;
 }
 
 .to-notes{
   font-size: 15px;
   color: rgb(255, 255, 255);
-  border: solid 1px rgb(0, 255, 242);
+  border: solid 1px rgb(226, 226, 226);
   border-style: double none double;
   font-family: "Black Ops One", cursive;
-  background: linear-gradient(to right, #001885 0%, #520081 100%);
+  background: #007685;
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
+}
+
+.to-notes:hover{
+  background-color: #048100;
 }

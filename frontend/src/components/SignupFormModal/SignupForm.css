@@ -2,18 +2,22 @@
         font-size: 15px;
         color: rgb(255, 255, 255);
         font-family: 'Black Ops One', cursive;
-        border: solid 1px rgb(0, 255, 242);
+        border: solid 1px rgb(226, 226, 226);
         border-style: double none double;
-        background: linear-gradient(to right, #520081 0%, #001885 100%);
+        background: linear-gradient(to right, #007685 0%, #048100 100%);
         border-radius: 5px;
         padding: 5px;
         margin: 10px;
 }
 
+.signup-button:hover{
+        background: linear-gradient(to right, #048100 0%, #007685 100%);
+}
+
 .sign-up-form{
         font-family: "Black Ops One", cursive;
         color: rgb(255, 0, 0);
-        border: solid 10px rgb(0, 255, 242);
+        border: solid 10px rgb(226, 226, 226);
         border-style: double none double;
         border-radius: 25px;
         width: 300px;
@@ -21,7 +25,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(to right, #45006dad 0%, #00146bad 100%);
+        background: linear-gradient(to right, #007685c5 0%, #048100cc 100%);
 }
 
 .sign-cred{
