@@ -151,7 +151,7 @@ function TheNotes() {
     }}
     >
       <span className='list-title'>{note?.title}</span>
-      <p >{ReactHtmlParser(note.content)}</p>
+      <p className='list-note'>{ReactHtmlParser(note.content)}</p>
       </li>
       );
 
@@ -217,9 +217,10 @@ function TheNotes() {
             {currentNotebook.name || currentNotebook}
           </h1>
           {currentNotebook != "Your Notes" ? (
-            <h1 onClick={() => setOpen(!open)}>
-            <img src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637349113/Styckr/Untitled_design_6_i8hwhf.png' alt='edit'/>
-            </h1>
+            <button className='edit-bttn' onClick={() => setOpen(!open)}>
+              <span className='the-span'>Edit Notebook</span>
+            <img className='edit' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637720523/Styckr/Untitled_design_13_iror3l.png' alt='edit'/>
+            </button>
           ) : (
             ""
           )}
@@ -240,11 +241,13 @@ function TheNotes() {
                 required
                 onChange={(e) => setNewNotebookTitle(e.target.value)}
               ></input>
-              <button className='save-note'type='submit'>
-              <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
-              </button>
               <button className='delete-note'onClick={handleBookDelete}>
+              <span className='the-third-span'>Delete Book</span>
                 <img className='delete-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285228/Styckr/Untitled_design_4_cnhbc4.png' alt='delete'/>
+              </button>
+              <button className='save-note'type='submit'>
+              <span className='the-second-span'>Save Book</span>
+              <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
 
 
@@ -265,9 +268,11 @@ function TheNotes() {
             <div >
 
               <button className='delete-note' onClick={handleNoteDelete}>
+                <span className='the-third-span'>Delete Note</span>
                 <img className='delete-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285228/Styckr/Untitled_design_4_cnhbc4.png' alt='delete'/>
               </button>
               <button className='save-note' onClick={handleSubmit}>
+                <span className='the-second-span'>Save Note</span>
               <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
             </div>

@@ -9,9 +9,9 @@
 
 .about {
   color: rgb(255, 255, 255);
-  border: solid 10px rgb(0, 255, 242);
+  border: solid 10px rgb(226, 226, 226);
   border-style: none double none;
-  background: linear-gradient(to right, #001885e1 0%, #520081e1 100%);
+  background: #024b00ce;
   border-radius: 25px;
   font-family: "Press Start 2P", cursive;
   font-weight: bold;
@@ -24,4 +24,8 @@
   align-items: center;
   width: 340px;
   height: 220px;
+}
+
+.about-button:hover{
+  color: rgb(0, 255, 0);
 }

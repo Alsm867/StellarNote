@@ -1,19 +1,23 @@
 .login-button {
   font-size: 15px;
   color: rgb(255, 255, 255);
-  border: solid 1px rgb(0, 255, 242);
+  border: solid 1px rgb(226, 226, 226);
   border-style: double none double;
   font-family: "Black Ops One", cursive;
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
-  background: linear-gradient(to right, #001885 0%, #520081 100%);
+  background: linear-gradient(to right, #048100 0%, #007685 100%);
+}
+
+.login-button:hover{
+  background: linear-gradient(to right, #007685 0%, #048100 100%);
 }
 
 .form-in-login {
   font-family: "Black Ops One", cursive;
   color: rgb(255, 0, 0);
-  border: solid 10px rgb(0, 255, 242);
+  border: solid 10px rgb(226, 226, 226);
   border-style: double none double;
   border-radius: 25px;
   width: 300px;
@@ -21,7 +25,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to right, #00146bad 0%, #45006dad 100%);
+  background: linear-gradient(to right, #048100cc 0%, #007685c5 100%);
 }
 
 .login-cred {

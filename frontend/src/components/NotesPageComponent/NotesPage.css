@@ -1,7 +1,7 @@
 .notebook-bar{
     background: #000b3aef;
     border-radius: 70px;
-    border: solid 10px rgb(0, 255, 242);
+    border: solid 10px rgb(226, 226, 226);
     border-style: none double none;
     margin-top: 70px;
     margin-right: 240px;
@@ -31,19 +31,29 @@
 
 }
 
+.list-notes{
+   margin-right: 20px;
+}
+
+.list-title{
+    font-size: 18px;
+    color: rgb(0, 255, 242);
+}
+
+
+
 .each-book{
     margin-right: 20px;
 }
 .each-book:hover{
-    background-color: rgb(0, 255, 242);
-    color: black;
+    text-shadow: 1px 1px 20px rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
 }
 
 .each-note:hover{
-    padding: 2px;
-    border: solid 1px rgb(0, 255, 242);
     width: auto;
-    background-color: #52008193;
+    text-shadow: 1px 1px 20px rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
 }
 
 .all-notes{
@@ -51,7 +61,7 @@
     margin-bottom: 45px;
     background: #00188593;
     border-radius: 70px;
-    border: solid 10px rgb(0, 255, 242);
+    border: solid 10px rgb(226, 226, 226);
     border-style: none double none;
     height: 800px;
 }
@@ -70,7 +80,7 @@ ul{
 }
 
 .note-preview{
-    border: solid 10px rgb(0, 255, 242);
+    border: solid 10px rgb(226, 226, 226);
     border-style: double none double;
     border-radius: 40px;
     text-align: center;
@@ -89,14 +99,6 @@ ul{
     overflow-y: scroll;
 }
 
-.list-notes{
-   margin-right: 20px;
-}
-
-.list-title{
-    font-size: 18px;
-    color: rgb(0, 255, 242);
-}
 
 
 .taking-notes{
@@ -149,13 +151,11 @@ ul{
     z-index: -1;
     display: hidden;
 }
-.save-note:hover{
-    z-index: 10;
-    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637688466/Styckr/Untitled_design_10_txignk.png') center;
-    text-align: center;
-    background-color: rgb(51, 255, 0);
-}
 
+
+.the-third-span{
+    display: none;
+}
 
 .delete-icon{
     width: 20px;
@@ -164,15 +164,9 @@ ul{
 
 .delete-icon:hover{
     z-index: -1;
-    display: hidden;
+    /* display: hidden; */
 }
 
-.delete-note:hover{
-    z-index: 10;
-    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637690403/Styckr/Untitled_design_11_foisuv.png') center;
-    text-align: center;
-    background-color: red;
-}
 
 .new-note-icon{
     width: 20px;
@@ -190,27 +184,143 @@ ul{
     padding-left: 7px;
 }
 
+.new-note:hover{
+    background-color: rgb(0, 255, 242);
+    color: rgb(0, 0, 0);
+}
+
+
+
+.save-note:hover img{
+    display: none;
+}
+
+.save-note:hover .the-second-span{
+    /* margin-bottom: -10px; */
+    /* margin-top: 10px; */
+    z-index: 102px;
+    display:inline-block;
+    position: relative;
+    left: 40px;
+    /* bottom: 20px; */
+    color: rgb(0, 255, 0);
+    text-shadow: 1px 1px 20px rgb(0, 255, 255);
+}
+
+.save-note:hover{
+    /* margin-bottom: -10px; */
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    text-align: center;
+    z-index: 100;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637688466/Styckr/Untitled_design_10_txignk.png') center;
+    text-align: center;
+    background-color: rgb(51, 255, 0);
+}
+
 .save-note{
+    /* margin-bottom: 10px; */
     background-color: rgba(255, 255, 255, 0);
     border: solid 1px rgb(30, 255, 0);
     border-radius: 40px;
     /* position: relative;
     top: 34px;
     left: 400px; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
     z-index: 3;
+    width: 35px;
+    height: 30px;
 }
 
 .delete-note{
+    padding: 0px;
+    /* margin-bottom: 10px; */
     background-color: rgba(255, 255, 255, 0);
     border: solid 1px red;
     border-radius: 40px;
     margin-right: 10px;
     /* right: 400px; */
     /* position: absolute; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    width: 35px;
+    height: 30px;
     z-index: 3;
 }
+
+.delete-note:hover{
+    /* margin-bottom: -20px; */
+    text-align: center;
+    z-index: 100;
+    border-radius: 40px;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637690403/Styckr/Untitled_design_11_foisuv.png') center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: red;
+}
+
+.the-second-span{
+    display: none;
+}
+
+.delete-note:hover img{
+    display: none;
+}
+
+.delete-note:hover .the-third-span{
+    margin-bottom: -10px;
+    z-index: 10px;
+    display:inline-block;
+    position: relative;
+    right: 55px;
+    /* bottom: 20px; */
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 40px rgb(255, 0, 0);
+}
+
+
+
+.the-span{
+    display: none;
+}
+
+.edit-bttn:hover .the-span{
+    z-index: 10px;
+    display: block;
+    position: relative;
+    left: 60px;
+    text-shadow: 1px 1px 40px rgb(0, 255, 0);
+}
+
+.edit-bttn{
+    width: 52px;
+    height:52px;
+    padding: 0px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgb(0, 247, 255);
+}
+
+.edit-bttn:hover img{
+    display: none;
+}
+
+.edit-bttn:hover{
+    z-index: 100;
+    /* padding: 0; */
+    border-radius: 40px;
+    background: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637720544/Styckr/Untitled_design_14_gobcwo.png') center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgb(0, 183, 255);}
+
+.edit{
+    width: 40px;
+    height:40px;
+}
+
+
 
 .book-title{
     color: white;
@@ -218,14 +328,14 @@ ul{
     font-size: 24px;
     width: 400px;
     position: absolute;
-    border: solid 5px rgb(0, 255, 242);
+    border: solid 5px rgb(226, 226, 226);
     border-style: none double none;
     padding-left: 5px;
     border-radius: 40px;
     top: 190px;
     left: 400px;
     margin-bottom: 50px;
-    background: #52008193;
+    background: #024900cc;
 }
 
 .add-book-bttn{
@@ -252,9 +362,9 @@ ul{
     color: white;
     font-family: "Black Ops One", cursive;
     border-radius: 40px;
-    border: solid 5px rgb(0, 255, 242);
+    border: solid 5px rgb(226, 226, 226);
     border-style: none double none;
-    background: #52008193;
+    background: #024900cc;
 }
 
 .edit-notebook-title{
@@ -270,12 +380,12 @@ ul{
     font-family: "Black Ops One", cursive;
     border-radius: 40px;
     border: solid 1px rgb(0, 255, 242);
-    background: linear-gradient(to right, #00098193 0%, #00188593 100%);
+    background: linear-gradient(to right, #024900cc 0%, #024900cc 100%);
 }
 
 .new-book-holder{
     color: white;
-    background-color: #52008193;
+    background-color: #000b3aef;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 40px;
@@ -297,14 +407,14 @@ ul{
 
 .ck.ck-toolbar>.ck-toolbar__items>:not(.ck-toolbar__line-break), .ck.ck-toolbar>.ck.ck-toolbar__grouped-dropdown{
     background: #000b3aef;
-    color: rgb(0, 255, 242);
+    color: #09ff00;
     border: solid 1px rgb(0, 255, 242);
 }
 
 
 
 .ck.ck-dropdown .ck-button.ck-dropdown__button {
-    color: rgb(0, 255, 242);
+    color: #09ff00;
 }
 
 .ck.ck-editor__main>.ck-editor__editable.ck-focused{
@@ -315,7 +425,7 @@ ul{
     font-family: "Black Ops One", cursive;
     border: solid 10px rgb(0, 255, 242);
     border-style: none double none;
-    background: #000b3aef;
+    background: #024900cc;
 }
 
 .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners{
@@ -342,7 +452,7 @@ ul{
     border-color:rgb(0, 255, 242);
     border-style: none double none;
     border-radius: 40px;
-    background-color: #000b3aef;
+    background-color: #022e00e8;
 
 }
 

@@ -14,9 +14,9 @@ body{
 }
 
 .home-page1{
-    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+    background: linear-gradient(to right, #04810093 0%, #00768593 100%);
     border-radius: 70px;
-    border: solid 10px rgb(0, 255, 242);
+    border: solid 10px rgb(226, 226, 226);
     border-style: none double none;
     margin-top: 150px;
     text-align: center;
@@ -25,20 +25,22 @@ body{
 }
 
 .stellar{
+    text-shadow: 1px 1px 20px rgb(0, 255, 242);
     font-size: 34px;
     margin-top: 20px;
     font-family: 'Press Start 2P', cursive;
-    color: rgb(0, 58, 248);
+    color: rgb(0, 255, 242);
 }
 .note{
+    text-shadow: 1px 1px 20px rgb(0, 255, 0);
     margin-top: 20px;
-    color: rgb(170, 0, 248);
+    color: rgb(43, 255, 0);
 }
 
 .about-home{
-    background: linear-gradient(to right, #52008193 0%, #00188593 100%);
+    background: linear-gradient(to right, #04810093 0%, #00768593 100%);
     border-radius: 70px;
-    border: solid 10px rgb(0, 255, 242);
+    border: solid 10px rgb(226, 226, 226);
     border-style: none double none;
     color: white;
     text-align: center;
