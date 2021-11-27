@@ -31,6 +31,7 @@ function TheNotes() {
   const [open, setOpen] = useState(false);
 
   ClassicEditor.defaultConfig = {
+    placeholder: 'Your Stellar Notes Go Here!',
     toolbar: {
       items: [
         'heading',
