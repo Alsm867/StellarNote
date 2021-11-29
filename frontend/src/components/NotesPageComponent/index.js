@@ -140,8 +140,8 @@ let AUTOSAVE_INTERVAL = 4500;
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
+      if(content !== '' && content !== currentContent){
       if (newNote){
-        console.log(newNote);
         const payload = {
           userId: sessionUser.id,
           notebookId: currentNotebook.id,
@@ -151,9 +151,11 @@ let AUTOSAVE_INTERVAL = 4500;
         let createdNote = dispatch(postNote(payload));
         setCurrentNote(createdNote);
         setNewNote(false)
+        postNewNote();
         return;
       }
-      // postNewNote();
+
+
 
 
       const editPayload = {
@@ -165,7 +167,7 @@ let AUTOSAVE_INTERVAL = 4500;
       dispatch(editNote(editPayload));
       dispatch(getTheNotes(sessionUser.id));
     //  postNewNote()
-
+  }
   }, AUTOSAVE_INTERVAL);
   return () => clearTimeout(timer);
 }, );
