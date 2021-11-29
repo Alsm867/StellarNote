@@ -30,7 +30,12 @@ function TheNotes() {
   const [name, setName] = useState("");
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
+  const [autoSave, setAutoSave] = useState(false);
+  // const [input, setInput] = useState("");
+  // const [errors, setErrors] = useState([]);
+  // const inputs = useSelector((state)=> state?.search?.content[0])
 
+  // console.log(inputs?.map(content => content.notebookId))
 
 
 
@@ -108,7 +113,62 @@ function TheNotes() {
     await dispatch(getTheNotes(sessionUser.id));
   };
 
+// let AUTOSAVE_INTERVAL;
+let AUTOSAVE_INTERVAL = 4500;
+// let save = document.getElementById('autosave');
 
+// const handleSave = async (e) => {
+//   e.preventDefault();
+//   if(autoSave === false){
+//     setAutoSave(true);
+//     AUTOSAVE_INTERVAL = 20;
+//   save.innerHTML = "autosave/on"
+//   }else{
+//     setAutoSave(false);
+//      AUTOSAVE_INTERVAL = 1000000000;
+//   save.innerHTML = "autosave/off"
+//   }
+
+// }
+
+
+// if(autoSave === true){
+
+// }else{
+
+// }
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      if (newNote){
+        console.log(newNote);
+        const payload = {
+          userId: sessionUser.id,
+          notebookId: currentNotebook.id,
+          content,
+          title,
+        };
+        let createdNote = dispatch(postNote(payload));
+        setCurrentNote(createdNote);
+        setNewNote(false)
+        return;
+      }
+      // postNewNote();
+
+
+      const editPayload = {
+        id: currentNote.id,
+        notebookId: currentNotebook.id,
+        content: currentContent,
+        title: currentTitle,
+      };
+      dispatch(editNote(editPayload));
+      dispatch(getTheNotes(sessionUser.id));
+    //  postNewNote()
+
+  }, AUTOSAVE_INTERVAL);
+  return () => clearTimeout(timer);
+}, );
 
 
 
@@ -328,7 +388,9 @@ function TheNotes() {
                 <span className='the-second-span'>Save Note</span>
               <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
-             
+              {/* <button id='autosave' onClick={handleSave}>
+                autosave/off
+              </button> */}
             </div>
           {/* <textarea
             className='note-loca'
