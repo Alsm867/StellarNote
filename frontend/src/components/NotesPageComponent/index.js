@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {useHistory} from 'react-router-dom';
 import "./NotesPage.css";
 import { postNote, getTheNotes, editNote, deleteNote } from "../../store/note";
 import {
@@ -10,12 +11,12 @@ import {
 } from "../../store/notebook";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import parse from 'html-react-parser';
 import ReactHtmlParser from 'react-html-parser';
+// import {searchNotes} from '../../store/search';
 
 function TheNotes() {
   const dispatch = useDispatch();
-
+  const history = useHistory();
   const sessionUser = useSelector((state) => state.session?.user);
   const notes = useSelector((state) => state?.note);
   const notebooks = useSelector((state) => state?.notebook);
@@ -29,6 +30,9 @@ function TheNotes() {
   const [name, setName] = useState("");
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
+
+
+
 
   ClassicEditor.defaultConfig = {
     placeholder: 'Your Stellar Notes Go Here!',
@@ -99,9 +103,13 @@ function TheNotes() {
       content: currentContent,
       title: currentTitle,
     };
+    // postNewNote()
     await dispatch(editNote(editPayload));
     await dispatch(getTheNotes(sessionUser.id));
   };
+
+
+
 
 
   const changeBookName = async (e) => {
@@ -152,11 +160,11 @@ function TheNotes() {
     }}
     >
       <span className='list-title'>{note?.title}</span>
-      <p className='list-note'>{ReactHtmlParser(note.content)}</p>
+      <div className='list-note'>{ReactHtmlParser(note.content)}</div>
       </li>
       );
 
-      const displayBook = (notebook) => {
+  const displayBook = (notebook) => {
           if (notebook === "Your Notes") {
               return Object.values(notes).map((note) => setBook(note));
     } else {
@@ -169,6 +177,16 @@ function TheNotes() {
   };
 
 
+  // let editor = document.getElementById('ckeditor')
+  // // let editSetting = editor.style.display;
+  // console.log(editor)
+
+  // if(editor.style.display === 'none'){
+  //   editor.style.display = 'block';
+  // }else{
+  //   editor.style.display = 'none';
+  // }
+
   function postNewNote() {
     setCurrentTitle("");
     setMainNoteContent("");
@@ -178,9 +196,42 @@ function TheNotes() {
     setNewNote(true);
   }
 
+  // const handleSubmit1 = (e) => {
+  //   e.preventDefault();
+  //   const errors = [];
+  //   if (input === "") {
+  //     errors.push("a search field is required");
+  //   }
+  //   setErrors(errors)
+  //   dispatch(searchNotes(input));
+  //   // displayBook(currentNotebook)
+  //   setCurrentTitle(inputs?.map(content => content.title))
+  //   setMainNoteContent(ReactHtmlParser(inputs?.map(content => content.content)))
+
+  //   history.push(`/notes`)
+  // }
+
+  // let search;
+  // if (sessionUser) {
+  //   search = (
+  //     <>
+  //     <form onSubmit={handleSubmit1}>
+  //     <ul className="errors">
+  //         {errors.map((error) => (
+  //           <li key={error}>{error}</li>
+  //         ))}
+  //         </ul>
+  //       <input type="text" placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)}></input>
+  //       <button type="submit">search</button>
+  //       </form>
+  //     </>
+  //   );
+  // }
+
 
   return (
     <div className='main-notes'>
+        {/* <span className='search'> {search}</span> */}
       <div className="notebook-bar">
 
         <div className='notebooks'>
@@ -255,6 +306,7 @@ function TheNotes() {
             </form>
           </div>
         )}
+        <div id='ckeditor'>
         <form className='note-form'>
           <input
             className='book-title'
@@ -276,6 +328,7 @@ function TheNotes() {
                 <span className='the-second-span'>Save Note</span>
               <img className='save-icon' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637285174/Styckr/Untitled_design_3_yhtnq6.png' alt='save'/>
               </button>
+             
             </div>
           {/* <textarea
             className='note-loca'
@@ -286,8 +339,9 @@ function TheNotes() {
               : (e) => setMainNoteContent(e.target.value)
             }value={currentContent ? currentContent : content}
             ></textarea> */}
-          <div>
+          <div >
             <CKEditor
+
             editor={ClassicEditor}
             data={currentContent ? currentContent : content}
             value={currentContent ? currentContent : content}
@@ -297,11 +351,10 @@ function TheNotes() {
             }}/>
           </div>
           <div>
-            <p >
-              {currentNotebook.name ? currentNotebook.name : currentNotebook}
-            </p>
+            <p >{currentNotebook.name ? currentNotebook.name : currentNotebook}</p>
           </div>
         </form>
+        </div>
       </div>
     </div>
   );

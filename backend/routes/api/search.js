@@ -1,33 +1,33 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
-const { Spot } = require("../../db/models");
+const { Note } = require("../../db/models");
 const router = express.Router();
 const {Op} = require('sequelize')
 
 
 
 router.put(
-    "/search",
+    "/",
     asyncHandler(async function (req, res) {
       const search = req.body.input
-      let spots
+      let notes
       let searchResult = false
       if (search !== undefined){
-          users = await Spot.findAll({
+          notes = await Note.findAll({
               where: {
-                  name :{
+                  content :{
                       [Op.iLike]: `%${search}%`
                   }
               }
           })
-          if (spots.length > 0){
+          if (notes.length > 0){
               searchResult = true
           }
       } else {
           searchResult = false;
-          users = await Spot.findAll()
+          notes = await Note.findAll()
       }
-      return res.json(spots)
+      return res.json(notes)
     })
   );
   module.exports = router;

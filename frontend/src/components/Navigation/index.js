@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
@@ -8,15 +8,16 @@ import * as sessionActions from '../../store/session';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
-  const discpatch = useDispatch();
+  const dispatch = useDispatch();
+  const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('')
 
   const demoLogin = async () => {
     setCredential('demo@user.io');
     setPassword('password');
-    return discpatch(
+    return dispatch(
       sessionActions.login({credential: 'demo@user.io', password: 'password'})
     );
   }
@@ -35,6 +36,8 @@ function Navigation({ isLoaded }){
         </div>
     );
   }
+
+
 
   return (
     <nav id='nav-tag'>
