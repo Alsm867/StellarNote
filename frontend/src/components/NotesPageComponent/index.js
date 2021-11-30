@@ -303,7 +303,7 @@ let AUTOSAVE_INTERVAL = 4500;
                 key={key}
                 onClick={() => setCurrentNotebook(notebooks[key])}
               >
-                | {notebooks[key].name} |
+                {notebooks[key].name}
               </div>
             ))}
         </div>
