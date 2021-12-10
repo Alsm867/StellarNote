@@ -114,7 +114,7 @@ function TheNotes() {
   };
 
 // let AUTOSAVE_INTERVAL;
-let AUTOSAVE_INTERVAL = 4500;
+let AUTOSAVE_INTERVAL = 2500;
 // let save = document.getElementById('autosave');
 
 // const handleSave = async (e) => {
