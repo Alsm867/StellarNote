@@ -1,5 +1,6 @@
 # StellarNote
 https://stellar-note.herokuapp.com/
+![StellarNote](https://res.cloudinary.com/dzjkwepju/image/upload/v1638485990/Styckr/Screenshot_2021-12-02_170921_ydzeli.png)
 ---
 _Stellar Note is a clone of Evernote with a space theme.
 
