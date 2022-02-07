@@ -222,7 +222,7 @@ let AUTOSAVE_INTERVAL = 2500;
     }}
     >
       <span className='list-title'>{note?.title}</span>
-      <div className='list-note'>{ReactHtmlParser(note.content)}</div>
+      <div className='list-note'>{ReactHtmlParser(note.content.slice(0, 75)+'...')}</div>
       </li>
       );
 
