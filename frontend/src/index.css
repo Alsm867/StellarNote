@@ -3,8 +3,19 @@ body{
     background-image: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1637169177/Styckr/StarfieldSimulation_yrrrcf.gif');
     background-repeat:no-repeat;
     background-size: cover;
+    cursor: url('./Untitled_design.png'), auto;
 
 }
+
+button{
+    cursor: url('./Untitled_design_(1).png'), auto;
+}
+
+a{
+    cursor: url('./Untitled_design_(1).png'), auto;
+  }
+
+
 
 .all-home{
     display: flex;

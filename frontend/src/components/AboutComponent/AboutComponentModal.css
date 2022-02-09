@@ -5,6 +5,10 @@
   color: rgb(255, 255, 255);
   font-family: 'Black Ops One', cursive;
   font-size: 20px;
+
+  cursor: url('../../Untitled_design_(1).png'), pointer;
+}
+button{
 }
 
 .about {
@@ -24,8 +28,11 @@
   align-items: center;
   width: 340px;
   height: 220px;
+  cursor: url('../../Untitled_design_(1).png'), auto;
+
 }
 
 .about-button:hover{
   color: rgb(0, 255, 0);
+  /* cursor: url('https://res.cloudinary.com/dzjkwepju/image/upload/v1644371134/Styckr/Untitled_design_1_ei2wc6.png'), pointer; */
 }

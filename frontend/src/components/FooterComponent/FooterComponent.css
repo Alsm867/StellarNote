@@ -1,4 +1,5 @@
 .Footer {
+
   color: rgb(240, 240, 240);
   font-size: 24px;
   display: flex;
@@ -8,7 +9,7 @@
   /* border-radius: 10px; */
   height: 50px;
   position:fixed;
-  margin-top: 142px;
+  /* margin-top: 142px; */
   margin-right: 10px;
   left: 0;
   bottom: 0;
@@ -23,6 +24,7 @@
 .sam{
   margin-right: 10px;
   font-family: 'Black Ops One', cursive;
+
 }
 
 .git{
@@ -32,6 +34,12 @@
 
 .g-hub{
   margin-right: 15px;
+
+}
+
+a .g-point{
+  z-index: 10px;
+  cursor: url('./Untitled_design_(1).png'), auto;
 }
 
 .my-hub{

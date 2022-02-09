@@ -79,11 +79,16 @@
   text-align: center;
   margin-right: 2px;
   width: 240px;
+  cursor: url('./Untitled_design_(1).png'), auto;
 }
 .each-book:hover {
     border-color: rgb(0, 255, 0);
   text-shadow: 1px 1px 20px rgb(0, 255, 0);
   color: rgb(0, 255, 0);
+}
+
+.each-note{
+  cursor: url('./Untitled_design_(1).png'), auto;
 }
 
 .each-note:hover {
