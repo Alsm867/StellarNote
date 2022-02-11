@@ -14,6 +14,8 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import ReactHtmlParser from 'react-html-parser';
 // import {searchNotes} from '../../store/search';
 
+//TODO remember to change the login function to take you to the notes page after log in
+
 function TheNotes() {
   const dispatch = useDispatch();
   const history = useHistory();
