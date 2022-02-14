@@ -18,7 +18,8 @@ function Navigation({ isLoaded }){
     setCredential('demo@user.io');
     setPassword('password');
     return dispatch(
-      sessionActions.login({credential: 'demo@user.io', password: 'password'})
+      sessionActions.login({credential: 'demo@user.io', password: 'password'}),
+      history.push('/notes')
     );
   }
 
