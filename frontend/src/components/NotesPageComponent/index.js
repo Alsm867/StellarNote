@@ -40,8 +40,6 @@ function TheNotes() {
 
   // console.log(inputs?.map(content => content.notebookId))
 
-
-
   ClassicEditor.defaultConfig = {
     placeholder: 'Your Stellar Notes Go Here!',
     toolbar: {
@@ -82,7 +80,8 @@ function TheNotes() {
   //   force.reRender()
 
   useEffect(() => dispatch(getTheNotes(sessionUser.id)), []);
-  useEffect(() => dispatch(getANotebook(sessionUser.id)), []);
+  useEffect(() => dispatch(getANotebook(sessionUser.id)), [dispatch, sessionUser.id]);
+  // useEffect(() => dispatch(setCurrentNotebook(notebooks)), [])
   useEffect(() => {},
   [ currentNote,
     currentContent,
@@ -292,6 +291,7 @@ let AUTOSAVE_INTERVAL = 2500;
   //     </>
   //   );
   // }
+  // notebooks[key].userId !== sessionUser.id ? null : notebooks[key].name
 
 
   return (
@@ -301,14 +301,14 @@ let AUTOSAVE_INTERVAL = 2500;
 
         <div className='notebooks'>
             {Object.keys(notebooks).map((key) => (
-              <div
-                className="each-book"
-                key={key}
-                onClick={() => setCurrentNotebook(notebooks[key])}
-              >
-                {notebooks[key].name}
-              </div>
-            ))}
+      <div
+        className="each-book"
+        key={key}
+        onClick={() => setCurrentNotebook(notebooks[key].userId)}
+      >
+        {notebooks[key].name}
+      </div>
+    ))}
         </div>
         <div>
           <div>
@@ -333,7 +333,7 @@ let AUTOSAVE_INTERVAL = 2500;
           <h1>
             {currentNotebook.name || currentNotebook}
           </h1>
-          {currentNotebook != "Your Notes" ? (
+          {currentNotebook !== "Your Notes" ? (
             <button className='edit-bttn' onClick={() => setOpen(!open)}>
               <span className='the-span'>Edit Notebook</span>
             <img className='edit' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637720523/Styckr/Untitled_design_13_iror3l.png' alt='edit'/>
