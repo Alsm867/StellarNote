@@ -25,9 +25,11 @@ function ProfileButton({ user }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
+
   const notes = (e) => {
     e.preventDefault();
     history.push('/notes')
+    // window.location.reload()
   }
 
   const logout = (e) => {

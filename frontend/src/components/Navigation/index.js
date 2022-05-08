@@ -20,7 +20,15 @@ function Navigation({ isLoaded }){
     return dispatch(
       sessionActions.login({credential: 'demo@user.io', password: 'password'}),
       history.push('/notes')
-    );
+    ), toReload();
+
+  }
+
+  const toReload = () => {
+    setTimeout(() => {
+
+    window.location.reload()
+  }, 100);
   }
 
   let sessionLinks;

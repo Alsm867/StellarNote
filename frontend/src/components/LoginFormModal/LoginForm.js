@@ -14,14 +14,22 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+
     return dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
       },
-      // history.push('/notes')
-    );
+
+      ), toReload();
   };
+
+  const toReload = () => {
+    setTimeout(() => {
+
+    window.location.reload()
+  }, 500);
+  }
 
   return (
       <form className='form-in-login' onSubmit={handleSubmit}>
