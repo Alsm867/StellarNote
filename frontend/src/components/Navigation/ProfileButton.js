@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import * as sessionActions from '../../store/session';
-import {useHistory} from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import * as sessionActions from "../../store/session";
+import { useHistory } from "react-router-dom";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -20,27 +20,32 @@ function ProfileButton({ user }) {
       setShowMenu(false);
     };
 
-    document.addEventListener('click', closeMenu);
+    document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
   const notes = (e) => {
     e.preventDefault();
-    history.push('/notes')
-  }
+    
+    history.push("/notes");
+  };
 
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
-    history.push('/')
+    history.push("/");
   };
 
   return (
     <>
-      <button className='to-notes' onClick={notes}>Notes</button>
+      <button className="to-notes" onClick={notes}>
+        Notes
+      </button>
 
-      <button className='log-out' onClick={logout}>Log Out</button>
+      <button className="log-out" onClick={logout}>
+        Log Out
+      </button>
     </>
   );
 }
