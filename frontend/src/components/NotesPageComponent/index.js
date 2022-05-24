@@ -33,12 +33,13 @@ function TheNotes() {
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
   const [autoSave, setAutoSave] = useState(false);
-
   // const [input, setInput] = useState("");
   // const [errors, setErrors] = useState([]);
   // const inputs = useSelector((state)=> state?.search?.content[0])
 
   // console.log(inputs?.map(content => content.notebookId))
+
+
 
   ClassicEditor.defaultConfig = {
     placeholder: 'Your Stellar Notes Go Here!',
@@ -74,14 +75,13 @@ function TheNotes() {
     config.removePlugins = 'style';
   }
 
-  // const force = useSelector(state=> state.notebook)
-  // console.log(force)
 
-  //   force.reRender()
+
+
+
 
   useEffect(() => dispatch(getTheNotes(sessionUser.id)), []);
-  useEffect(() => dispatch(getANotebook(sessionUser.id)), [dispatch, sessionUser.id]);
-  // useEffect(() => dispatch(setCurrentNotebook(notebooks)), [])
+  useEffect(() => dispatch(getANotebook(sessionUser.id)), []);
   useEffect(() => {},
   [ currentNote,
     currentContent,
@@ -291,7 +291,6 @@ let AUTOSAVE_INTERVAL = 2500;
   //     </>
   //   );
   // }
-  // notebooks[key].userId !== sessionUser.id ? null : notebooks[key].name
 
 
   return (
@@ -301,20 +300,20 @@ let AUTOSAVE_INTERVAL = 2500;
 
         <div className='notebooks'>
             {Object.keys(notebooks).map((key) => (
-      <div
-        className="each-book"
-        key={key}
-        onClick={() => setCurrentNotebook(notebooks[key].userId)}
-      >
-        {notebooks[key].name}
-      </div>
-    ))}
+              <div
+                className="each-book"
+                key={key}
+                onClick={() => setCurrentNotebook(notebooks[key])}
+              >
+                {notebooks[key].name}
+              </div>
+            ))}
         </div>
         <div>
           <div>
             <input
               className='new-book-title'
-              placeholder="Add New Notebook..."
+              placeholder="New Notebook..."
               onChange={(e) => setName(e.target.value)}
               required="required"
             ></input>
@@ -333,7 +332,7 @@ let AUTOSAVE_INTERVAL = 2500;
           <h1>
             {currentNotebook.name || currentNotebook}
           </h1>
-          {currentNotebook !== "Your Notes" ? (
+          {currentNotebook != "Your Notes" ? (
             <button className='edit-bttn' onClick={() => setOpen(!open)}>
               <span className='the-span'>Edit Notebook</span>
             <img className='edit' src='https://res.cloudinary.com/dzjkwepju/image/upload/v1637720523/Styckr/Untitled_design_13_iror3l.png' alt='edit'/>
