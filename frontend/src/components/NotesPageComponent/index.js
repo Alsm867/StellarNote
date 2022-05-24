@@ -313,7 +313,7 @@ let AUTOSAVE_INTERVAL = 2500;
           <div>
             <input
               className='new-book-title'
-              placeholder="New Notebook..."
+              placeholder="Add New Notebook..."
               onChange={(e) => setName(e.target.value)}
               required="required"
             ></input>

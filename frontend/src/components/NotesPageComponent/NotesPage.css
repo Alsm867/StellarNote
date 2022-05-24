@@ -551,3 +551,21 @@ body::-webkit-scrollbar-thumb {
   margin-left: 55px;
   background-color: transparent;
 }
+
+@media screen and (max-width:1441px) {
+  .book-title {
+    color: white;
+    font-family: "Black Ops One", cursive;
+    font-size: 24px;
+    width: 400px;
+    position: absolute;
+    border: solid 5px rgb(226, 226, 226);
+    border-style: none double none;
+    padding-left: 5px;
+    border-radius: 40px;
+    top: 190px;
+    left: 300px;
+    margin-bottom: 50px;
+    background: #024900cc;
+  }
+}
