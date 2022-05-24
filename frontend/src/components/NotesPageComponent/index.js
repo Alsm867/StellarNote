@@ -33,6 +33,7 @@ function TheNotes() {
   const [newNotebookTitle, setNewNotebookTitle] = useState("");
   const [open, setOpen] = useState(false);
   const [autoSave, setAutoSave] = useState(false);
+
   // const [input, setInput] = useState("");
   // const [errors, setErrors] = useState([]);
   // const inputs = useSelector((state)=> state?.search?.content[0])
@@ -73,10 +74,10 @@ function TheNotes() {
     config.removePlugins = 'style';
   }
 
+  // const force = useSelector(state=> state.notebook)
+  // console.log(force)
 
-
-
-
+  //   force.reRender()
 
   useEffect(() => dispatch(getTheNotes(sessionUser.id)), []);
   useEffect(() => dispatch(getANotebook(sessionUser.id)), [dispatch, sessionUser.id]);
